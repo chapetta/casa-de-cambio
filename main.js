@@ -27,10 +27,13 @@ function getCurrencies() {
 
   searchButton.addEventListener('click', async () => {
     try {
+      const ul = document.querySelector('ul')
+      ul.innerHTML= ''
       const currencie = searchInput.value
       const { base_code, conversion_rates } = await fetchCurrencies(currencie)
       handleRates(conversion_rates)
       handleBase(base_code)
+      
       searchInput.value = ''
     } catch(error) {
       Swal.fire({
