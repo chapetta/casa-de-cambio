@@ -12,6 +12,7 @@
   "type": "module",
   "dependencies": {
     "node-fetch": "^3.3.2",
+    "sweetalert2": "^11.10.7",
     "vite": "^5.2.8"
   },
   "devDependencies": {

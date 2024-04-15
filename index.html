@@ -7,12 +7,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
   <h1>Casa de Câmbio</h1>
-  <h3 id="base">Base: USD</h3>
-  <button>Pesquisar</button>
+</header>
+<main>
+  <section>
+    <label for="currency-input">Digite a moeda: </label>
+    <input type="text" id="currency-input" placeholder="USD">
+    <button id="search-button">Pesquisar</button>
+  </section>
+  <section>
+  <h3 id="base"></h3>
   <ul id="currencies-list">
+  </section>
 
   </ul>
+</main>
 
 
   <script src="./main.js" type="module"></script>
