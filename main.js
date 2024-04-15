@@ -25,12 +25,16 @@ function getCurrencies() {
   const searchInput = document.querySelector('#currency-input')
   const searchButton = document.querySelector('#search-button')
 
+function clearCurrencieList () {
+  const ul = document.querySelector('ul')
+  ul.innerHTML= ''
+}
+
   searchButton.addEventListener('click', async () => {
     try {
-      const ul = document.querySelector('ul')
-      ul.innerHTML= ''
       const currencie = searchInput.value
       const { base_code, conversion_rates } = await fetchCurrencies(currencie)
+      clearCurrencieList()
       handleRates(conversion_rates)
       handleBase(base_code)
       
